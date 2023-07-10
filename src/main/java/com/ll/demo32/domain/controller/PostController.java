@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
-@RequestMapping("/post")
+@RequestMapping("/posts")
 @RequiredArgsConstructor
 public class PostController {
     private final PostService postService;
@@ -18,5 +20,11 @@ public class PostController {
     @ResponseBody
     public Post create() {
         return postService.write("제목");
+    }
+
+    @GetMapping("")
+    @ResponseBody
+    public List<Post> posts() {
+        return postService.findAll();
     }
 }
