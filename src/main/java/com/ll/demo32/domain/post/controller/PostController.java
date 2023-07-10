@@ -1,7 +1,7 @@
-package com.ll.demo32.domain.controller;
+package com.ll.demo32.domain.post.controller;
 
-import com.ll.demo32.domain.entity.Post;
-import com.ll.demo32.domain.service.PostService;
+import com.ll.demo32.domain.post.entity.Post;
+import com.ll.demo32.domain.post.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

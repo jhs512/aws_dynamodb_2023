@@ -1,6 +1,6 @@
-package com.ll.demo32.domain.repository;
+package com.ll.demo32.domain.post.repository;
 
-import com.ll.demo32.domain.entity.Post;
+import com.ll.demo32.domain.post.entity.Post;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
