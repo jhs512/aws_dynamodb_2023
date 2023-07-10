@@ -3,8 +3,7 @@ package com.ll.demo32.domain.entity;
 import lombok.*;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
-
-import java.util.UUID;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 @DynamoDbBean
 @Getter
@@ -20,5 +19,10 @@ public class Post {
     @DynamoDbPartitionKey
     public String getId() {
         return id;
+    }
+
+    @DynamoDbSortKey
+    public String getCreateDate() {
+        return createDate;
     }
 }
