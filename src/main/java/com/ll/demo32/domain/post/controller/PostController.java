@@ -29,9 +29,9 @@ public class PostController {
         return postService.findAll();
     }
 
-    @GetMapping("{id}/{createDate}")
+    @GetMapping("{id}")
     @ResponseBody
-    public Post post(@PathVariable String id, @PathVariable String createDate) {
-        return postService.findByIdAndCreateDate(id, createDate).orElse(null);
+    public Post post(@PathVariable String id) {
+        return postService.findById(id).orElse(null);
     }
 }
